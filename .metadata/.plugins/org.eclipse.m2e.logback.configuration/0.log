@@ -1,0 +1,27 @@
+2017-09-14 19:35:00,618 [Worker-7] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: banking-app:banking-app:0.0.1-SNAPSHOT @ D:\bank-app\banking-app\pom.xml.
+2017-09-14 19:35:03,728 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-09-14 19:35:03,734 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\bank-app\banking-app\src\main\resources
+2017-09-14 19:35:03,742 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-09-14 19:35:03,748 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\bank-app\banking-app\src\test\resources
+2017-09-14 19:35:03,795 [Worker-7] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /banking-app/src
+2017-09-14 19:35:03,796 [Worker-7] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /banking-app/src/test/java because it overlaps with /banking-app/src
+2017-09-14 19:35:04,573 [Worker-7] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2017-09-14 19:35:05,639 [Worker-7] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: banking-app:banking-app:0.0.1-SNAPSHOT @ D:\bank-app\banking-app\pom.xml.
+2017-09-14 19:35:07,424 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-09-14 19:35:07,427 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\bank-app\banking-app\src\main\resources
+2017-09-14 19:35:07,429 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-09-14 19:35:07,431 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\bank-app\banking-app\src\test\resources
+2017-09-14 19:35:07,432 [Worker-4] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of banking-app
+2017-09-14 19:35:07,434 [Worker-4] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for banking-app
+2017-09-14 19:35:07,471 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-09-14 19:35:07,533 [Worker-7] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /banking-app/src
+2017-09-14 19:35:07,534 [Worker-7] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /banking-app/src/test/java because it overlaps with /banking-app/src
+2017-09-14 19:35:08,010 [Worker-7] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for banking-app
+2017-09-14 19:35:08,072 [Worker-7] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 3 sec
+2017-09-14 19:35:08,543 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-09-14 19:35:08,545 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\bank-app\banking-app\src\main\resources
+2017-09-14 19:35:08,547 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-09-14 19:35:08,550 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\bank-app\banking-app\src\test\resources
+2017-09-14 19:35:08,550 [Worker-7] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of banking-app
+2017-09-14 19:35:08,551 [Worker-7] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for banking-app
+2017-09-14 19:35:08,559 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
