@@ -1,0 +1,11 @@
+127.0.0.1 - - [15/Sep/2017:11:05:54 +0530] "GET / HTTP/1.1" 404 1070
+127.0.0.1 - - [15/Sep/2017:11:05:55 +0530] "GET /banking-app/test.html HTTP/1.1" 200 939
+127.0.0.1 - - [15/Sep/2017:11:05:55 +0530] "GET /banking-app/Templates/bank.css HTTP/1.1" 404 1100
+127.0.0.1 - - [15/Sep/2017:12:26:39 +0530] "GET / HTTP/1.1" 404 1070
+127.0.0.1 - - [15/Sep/2017:12:26:40 +0530] "GET /banking-app/test.html HTTP/1.1" 304 -
+127.0.0.1 - - [15/Sep/2017:12:26:40 +0530] "GET /banking-app/Templates/bank.css HTTP/1.1" 404 1100
+127.0.0.1 - - [15/Sep/2017:12:27:42 +0530] "GET /banking-app/index.jsp HTTP/1.1" 200 4746
+127.0.0.1 - - [15/Sep/2017:12:27:43 +0530] "GET /banking-app/style.css HTTP/1.1" 404 1091
+127.0.0.1 - - [15/Sep/2017:12:27:43 +0530] "GET /banking-app/images/globe_10.gif HTTP/1.1" 404 1101
+127.0.0.1 - - [15/Sep/2017:12:27:43 +0530] "GET /banking-app/images/globe_12.gif HTTP/1.1" 404 1101
+127.0.0.1 - - [15/Sep/2017:12:27:43 +0530] "GET /banking-app/images/globe_16.gif HTTP/1.1" 404 1101
