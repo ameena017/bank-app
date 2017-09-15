@@ -1,2 +1,9 @@
 1505464648016	Delete element
 1505464657921	Delete element
+1505468026795	Rename field 'name'
+1505468147313	Rename field 'name'
+1505468180939	Rename field 'stream'
+1505468195904	Rename field 'number'
+1505468220923	Rename field 'lnamer'
+1505468277070	Rename local variable 'id'
+1505470145922	Rename local variable 'emp'

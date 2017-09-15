@@ -1,0 +1,61 @@
+package com.bank.model;
+
+public class model {
+	 protected int acc_no;
+	    protected String password;
+	    protected String fname;
+	    protected String lname;
+	    protected String phone;
+	    protected String email;
+	    protected String address;
+	    protected int amount;
+	    public model() {
+	    }
+	 
+	    public model(int acc_no) {
+	        this.acc_no = acc_no;
+	    }
+	 
+	    public model(int id, String password, String fname, String lname, String phone, String email, String address, int amount) {
+	        this(password,fname,lname,phone,email,address,amount);
+	        this.acc_no = acc_no;
+	    }
+	     
+	    public model(String name, String stream, int number) {
+	        this.password = name;
+	        this.fname = stream;
+	        this.lname = number;
+	    }
+	 
+	    public int getId() {
+	        return acc_no;
+	    }
+	 
+	    public void setId(int id) {
+	        this.acc_no = id;
+	    }
+	 
+	    public String getname() {
+	        return password;
+	    }
+	 
+	    public void setname(String name) {
+	        this.password = name;
+	    }
+	 
+	    public String getstream() {
+	        return fname;
+	    }
+	 
+	    public void setstream(String stream) {
+	        this.fname = stream;
+	    }
+	 
+	    public int getnumber() {
+	        return lname;
+	    }
+	 
+	    public void setnumber(int number) {
+	        this.lname = number;
+	    }
+}
