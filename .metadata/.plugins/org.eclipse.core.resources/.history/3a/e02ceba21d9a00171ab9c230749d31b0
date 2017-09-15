@@ -16,7 +16,6 @@ import javax.servlet.http.HttpSession;
 
 import com.bank.model.model;
 import com.bank.model.LoginUser;
-import com.bank.model.bankDAO;
 
 /**
  * Servlet implementation class ControllerServlet
