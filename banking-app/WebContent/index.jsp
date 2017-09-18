@@ -11,15 +11,15 @@
             <center>
            
                 <div id="header">
-	<h1> Welcome to United Bank<span class="style1"></span></h1>
+	<h1> Welcome to United Bank<span class="style2"></span></h1>
     <h2>Extra-Ordinary Banking Service</h2>	
 </div>
 
 <div id="navigation">
     <ul>
     Select User Type
-    <li><a href="create.html">Bank Admin</a></li>
-    <li><a href="balance1.jsp">Customer</a></li>
+    <li><a href="login.jsp">Bank Admin</a></li>
+    <li><a href="login1.jsp">Customer</a></li>
    
     </ul>
 </div>

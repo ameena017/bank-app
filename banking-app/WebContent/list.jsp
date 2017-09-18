@@ -38,9 +38,9 @@
                     <td><c:out value="${bank.email}" /></td>
                     <td><c:out value="${bank.address}" /></td>
                     <td><c:out value="${bank.amount}" /></td>
-                       <%--  <a href="edit?id=<c:out value='${bank.acc_no}' />">Edit </a>
+                       <td> <a href="edit?acc_no=<c:out value='${bank.acc_no}' />">Edit </a>
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="delete?id=<c:out value='${bank.acc_no}' />">Delete</a>  --%>                    
+                        <a href="delete?acc_no=<c:out value='${bank.acc_no}' />">Delete</a>                     
                     </td>
                 </tr>
             </c:forEach>

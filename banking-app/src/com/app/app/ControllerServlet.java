@@ -86,6 +86,8 @@ public class ControllerServlet extends HttpServlet {
                   case "/login":
                      loginValidate(request,response);
                      break;
+                  case "/login1":
+                	  UserLogin(request,response);
                   default:
                      response.sendRedirect("login.jsp");
                      break;
@@ -133,7 +135,7 @@ public class ControllerServlet extends HttpServlet {
         model bank1;
         while(itr.hasNext()){
         	bank1=(model)itr.next();
-        	System.out.println(bank1.getId());
+        	System.out.println(bank1.getAcc_no());
         }
         
         
@@ -158,7 +160,8 @@ public class ControllerServlet extends HttpServlet {
             throws SQLException, ServletException, IOException {
     	
     	 String acc = request.getParameter("acc_no");
-        int acc_no = Integer.parseInt(acc);
+    	 int acc_no  = (acc!=null) ? Integer.parseInt(acc) : 0;
+       // int acc_no = Integer.parseInt(acc);
         model existingBank =  bankDAO.getCustomer(acc_no);
         RequestDispatcher dispatcher = request.getRequestDispatcher("form.jsp");
         request.setAttribute("bank", existingBank);
@@ -209,11 +212,33 @@ model newbank = new model( password,fname,lname,phone,email,address,amount);
         response.sendRedirect("list");
  
     }
+    
+    
+    private void UserLogin(HttpServletRequest request, HttpServletResponse response)
+    		 throws SQLException, IOException {
+    
 
+    	HttpSession session = request.getSession(true);
+    	String uname=request.getParameter("acc_no");
+    	String pwd=request.getParameter("password");
+    	LoginUser obj=new LoginUser(uname,pwd);
+    	System.out.println("obj"+obj.getUsername());
+    	       String result= bankDAO.loginCheck(obj);
+    	    System.out.println("result"+result);
+    	        request.setAttribute("result", result);
+    	        PrintWriter out = response.getWriter();
+    	        if(result.equals("true")){
+    	        System.out.println("result  if("+result);
+    	session.setAttribute("email",obj.getUsername());
+    	            response.sendRedirect("user.jsp");
+    	        }
+    	         
+    	        if(result.equals("false")){
+    	        out.println("Authentication failed");
+    	            response.sendRedirect("index.jsp");
+    	        }
+    	      
 	
-	
-	
-	
-	
+    }
 
 }

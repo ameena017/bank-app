@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class bankDAO {
 	
 	 private String jdbcURL;
@@ -98,7 +99,7 @@ public class bankDAO {
 	        connect();
 	         
 	        PreparedStatement statement = jdbcConnection.prepareStatement(sql);
-	        statement.setInt(1, bank.getId());
+	        statement.setInt(1, bank.getAcc_no());
 	         
 	        boolean rowDeleted = statement.executeUpdate() > 0;
 	        statement.close();
@@ -157,4 +158,27 @@ public class bankDAO {
 	         
 	        return bank;
 	    }
+	    
+	    public  String loginCheck(LoginUser obj) throws SQLException {
+
+	    	String sql = "SELECT * FROM customer_det WHERE acc_no = ? AND password=?";
+	    	String uname= obj.getUsername();
+	    	String pwd = obj.getPassword();
+	    	connect();
+
+	    	PreparedStatement statement = jdbcConnection.prepareStatement(sql);
+	    	statement.setString(1, uname);
+	    	statement.setString(2, pwd);
+	    	ResultSet resultSet = statement.executeQuery();
+
+	    	if (resultSet.next()) {
+	    	resultSet.close();
+	    	statement.close();
+	    	return "true";
+	    	} else {
+	    	resultSet.close();
+	    	statement.close();
+	    	return "false";
+	    	}
+}
 }

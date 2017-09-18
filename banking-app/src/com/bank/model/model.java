@@ -31,7 +31,7 @@ public class model {
 	        this.amount=amount;
 	    }
 	 
-	    public int getId() {
+	    public int getAcc_no() {
 	        return acc_no;
 	    }
 	 

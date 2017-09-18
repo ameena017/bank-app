@@ -4,9 +4,9 @@ public class LoginUser {
 	
 		String username;
 		String password;
-		public LoginUser(String unmae,String pwd)
+		public LoginUser(String uname,String pwd)
 		{
-			this.username=unmae;
+			this.username=uname;
 			this.password=pwd;
 			
 		}
