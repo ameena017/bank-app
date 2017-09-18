@@ -12,7 +12,7 @@
            
                 <div id="header">
 	<h1> Welcome to United Bank<span class="style1"></span></h1>
-    <h2>ExtraOrdinary Service</h2>	
+    <h2>Extra-Ordinary Banking Service</h2>	
 </div>
 
 <div id="navigation">

@@ -1,5 +1,6 @@
 package com.app.app;
 import java.io.IOException;
+
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.Iterator;
@@ -86,7 +87,7 @@ public class ControllerServlet extends HttpServlet {
                      loginValidate(request,response);
                      break;
                   default:
-                     response.sendRedirect("index.jsp");
+                     response.sendRedirect("login.jsp");
                      break;
 	             }
 	         } catch (SQLException ex) {
@@ -126,23 +127,40 @@ public class ControllerServlet extends HttpServlet {
     private void listCustomer(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
         List<model> listCustomer = bankDAO.listAllCustomer();
+        System.out.println();
+        
+        Iterator itr=listCustomer.iterator();
+        model bank1;
+        while(itr.hasNext()){
+        	bank1=(model)itr.next();
+        	System.out.println(bank1.getId());
+        }
+        
+        
+        
+        
+        
+        
+        
         request.setAttribute("listCustomer", listCustomer);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("index1.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("list.jsp");
         dispatcher.forward(request, response);
     }
     
 
     private void showNewForm(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("index2.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("form.jsp");
         dispatcher.forward(request, response);
     }
     
     private void showEditForm(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, ServletException, IOException {
-        int acc_no = Integer.parseInt(request.getParameter("acc_no"));
+    	
+    	 String acc = request.getParameter("acc_no");
+        int acc_no = Integer.parseInt(acc);
         model existingBank =  bankDAO.getCustomer(acc_no);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("index2.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("form.jsp");
         request.setAttribute("bank", existingBank);
         dispatcher.forward(request, response);
  

@@ -19,3 +19,10 @@
 127.0.0.1 - - [15/Sep/2017:14:07:15 +0530] "GET /banking-app/create.html HTTP/1.1" 404 1093
 127.0.0.1 - - [15/Sep/2017:17:15:36 +0530] "GET / HTTP/1.1" 404 1070
 127.0.0.1 - - [15/Sep/2017:17:15:38 +0530] "GET /banking-app/login.jsp HTTP/1.1" 200 1308
+127.0.0.1 - - [15/Sep/2017:19:28:39 +0530] "GET / HTTP/1.1" 404 1070
+127.0.0.1 - - [15/Sep/2017:19:28:40 +0530] "GET /banking-app/ HTTP/1.1" 200 664
+127.0.0.1 - - [15/Sep/2017:19:28:43 +0530] "GET /banking-app/create.html HTTP/1.1" 302 -
+127.0.0.1 - - [15/Sep/2017:19:28:43 +0530] "GET /banking-app/index.jsp HTTP/1.1" 200 664
+127.0.0.1 - - [15/Sep/2017:19:28:49 +0530] "GET /banking-app/create.html HTTP/1.1" 302 -
+127.0.0.1 - - [15/Sep/2017:19:28:49 +0530] "GET /banking-app/index.jsp HTTP/1.1" 200 664
+127.0.0.1 - - [15/Sep/2017:19:28:50 +0530] "GET /banking-app/balance1.jsp HTTP/1.1" 404 1094

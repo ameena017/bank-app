@@ -62,6 +62,7 @@ public class bankDAO {
 	        List<model> listCustomer = new ArrayList<>();
 	         
 	        String sql = "SELECT * FROM customer_det";
+	        System.out.println("hello");
 	         
 	        connect();
 	         
@@ -78,7 +79,7 @@ public class bankDAO {
 	            String address = resultSet.getString("address");
 	               
 	            int amount = resultSet.getInt("amount");
-	             
+	             System.out.println(address);
 	            model bank = new model(acc_no, password,fname,lname,phone,email,address,amount);
 	            listCustomer.add(bank);
 	        }

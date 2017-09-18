@@ -12,7 +12,7 @@
   
   <context-param>
         <param-name>jdbcURL</param-name>
-        <param-value>jdbc:mysql://127.0.0.1:3306/employee_details</param-value>
+        <param-value>jdbc:mysql://127.0.0.1:3306/banking_app</param-value>
     </context-param>
  
     <context-param>

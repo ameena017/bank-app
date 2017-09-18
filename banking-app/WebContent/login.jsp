@@ -4,10 +4,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Example</title>
+        <title>Welcome to United Bank</title>
     </head>
     <body>
-        <form method="post" action="login.jsp">
+        <form method="post" action="login">
             <center>
             <table border="1" width="30%" cellpadding="3">
                 <thead>
@@ -17,19 +17,19 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>User Name</td>
-                        <td><input type="text" name="uname" value="" /></td>
+                        <td>Account no</td>
+                        <td><input type="text" name="acc_no" value="" /></td>
                     </tr>
                     <tr>
                         <td>Password</td>
-                        <td><input type="password" name="pass" value="" /></td>
+                        <td><input type="password" name="password" value="" /></td>
                     </tr>
                     <tr>
-                        <td><input type="submit" value="Login" /></td>
-                        <td><input type="reset" value="Reset" /></td>
+                       <center> <td><input type="submit" value="login" /></td></center>
+                       <!--  <td><input type="reset" value="Reset" /></td> -->
                     </tr>
                     <tr>
-                        <td colspan="2">Yet Not Registered!! <a href="reg.jsp">Register Here</a></td>
+                        <td colspan="2">Don't have an account?! <a href="reg.jsp">Contact your nearest United Bank branch here</a></td>
                     </tr>
                 </tbody>
             </table>
