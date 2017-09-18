@@ -42,7 +42,7 @@
             <tr>
                 <th>Password </th>
                 <td>
-                    <input type="text" name="password" size="45"
+                    <input type="password" name="password" size="45"
                             value="<c:out value='${bank.password}' />"
                         />
                 </td>

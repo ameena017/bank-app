@@ -3,3 +3,4 @@
 1505724491067	Rename method 'getId'
 1505734254181	Move 'login1.jsp' to 'target'
 1505734378673	Move 'login1.jsp' to 'WebContent'
+1505744795369	Move 'edituser.jsp' to 'WebContent'

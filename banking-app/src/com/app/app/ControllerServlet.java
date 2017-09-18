@@ -74,6 +74,9 @@ public class ControllerServlet extends HttpServlet {
 	             case "/edit":
 	                 showEditForm(request, response);
 	                 break;
+	             case "/edit1":
+	            	   showEditFormUser(request, response);
+	                 break;
 	             case "/update":
 	                 updateCustomer(request, response);
 	                 break;
@@ -88,8 +91,9 @@ public class ControllerServlet extends HttpServlet {
                      break;
                   case "/login1":
                 	  UserLogin(request,response);
+                	  break;
                   default:
-                     response.sendRedirect("login.jsp");
+                     response.sendRedirect("index.jsp");
                      break;
 	             }
 	         } catch (SQLException ex) {
@@ -169,6 +173,22 @@ public class ControllerServlet extends HttpServlet {
  
 
     }
+    
+    
+    
+    private void showEditFormUser(HttpServletRequest request, HttpServletResponse response)
+            throws SQLException, ServletException, IOException {
+    	
+    	 String acc = request.getParameter("acc_no");
+    	 int acc_no  = (acc!=null) ? Integer.parseInt(acc) : 0;
+       // int acc_no = Integer.parseInt(acc);
+        model existingBank =  bankDAO.getCustomer(acc_no);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("edituser.jsp");
+        request.setAttribute("bank", existingBank);
+        dispatcher.forward(request, response);
+ 
+
+    }
  
     private void newCustomer(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException {
@@ -196,7 +216,8 @@ model newbank = new model( password,fname,lname,phone,email,address,amount);
         String email= request.getParameter("email");
         String address = request.getParameter("address");
         String num = request.getParameter("amount");
-        int amount = Integer.parseInt(num);
+        int amount  = (num!=null) ? Integer.parseInt(num) : 0;
+        
  
         model bank = new model( acc_no,password,fname,lname,phone,email,address,amount);
         bankDAO.updateCustomer(bank);
@@ -215,7 +236,7 @@ model newbank = new model( password,fname,lname,phone,email,address,amount);
     
     
     private void UserLogin(HttpServletRequest request, HttpServletResponse response)
-    		 throws SQLException, IOException {
+    		 throws SQLException, IOException, ServletException {
     
 
     	HttpSession session = request.getSession(true);
@@ -227,10 +248,26 @@ model newbank = new model( password,fname,lname,phone,email,address,amount);
     	    System.out.println("result"+result);
     	        request.setAttribute("result", result);
     	        PrintWriter out = response.getWriter();
+    	        
+    	        
     	        if(result.equals("true")){
-    	        System.out.println("result  if("+result);
+    	        System.out.println("result  if"+result);
     	session.setAttribute("email",obj.getUsername());
-    	            response.sendRedirect("user.jsp");
+    	
+    	/*model existingBank =  bankDAO.getCustomer(acc_no);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("form.jsp");
+        request.setAttribute("bank", existingBank);
+        dispatcher.forward(request, response);*/
+    	
+    	int acc_no= Integer.parseInt(obj.getUsername());
+    	System.out.println(acc_no);
+    	model user= bankDAO.getCustomer(acc_no);
+    	System.out.println(user.getAddress());
+    	 RequestDispatcher dispatcher = request.getRequestDispatcher("user.jsp");
+    	request.setAttribute("bank", user);
+    	dispatcher.forward(request, response);
+    	return;
+    	           // response.sendRedirect("user.jsp");
     	        }
     	         
     	        if(result.equals("false")){
