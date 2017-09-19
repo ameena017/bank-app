@@ -41,17 +41,17 @@ public class bankDAO {
 	    }
 	     
 	    public boolean newCustomer(model bank) throws SQLException {
-	        String sql = "INSERT INTO customer_det (password,fname,lname,phone,email,address,amount) VALUES (?, ?, ?)";
+	        String sql = "INSERT INTO customer_det (password,fname,lname,phone,email,address,amount) VALUES (?, ?, ?,?,?,?,?)";
 	        connect();
 	         
 	        PreparedStatement statement = jdbcConnection.prepareStatement(sql);
 	        statement.setString(1, bank.getPassword());
 	        statement.setString(2, bank.getFname());
 	        statement.setString(3, bank.getLname());
-	        statement.setString(3, bank.getPhone());
-	        statement.setString(3, bank.getEmail());
-	        statement.setString(3, bank.getAddress());
-	        statement.setInt(3, bank.getAmount());
+	        statement.setString(4, bank.getPhone());
+	        statement.setString(5, bank.getEmail());
+	        statement.setString(6, bank.getAddress());
+	        statement.setInt(7, bank.getAmount());
 	         
 	        boolean rowInserted = statement.executeUpdate() > 0;
 	        statement.close();
@@ -116,10 +116,12 @@ public class bankDAO {
 	        statement.setString(1, bank.getPassword());
 	        statement.setString(2, bank.getFname());
 	        statement.setString(3, bank.getLname());
-	        statement.setString(3, bank.getPhone());
-	        statement.setString(3, bank.getEmail());
-	        statement.setString(3, bank.getAddress());
-	        statement.setInt(3, bank.getAmount());
+	        statement.setString(4, bank.getPhone());
+	        statement.setString(5, bank.getEmail());
+	        statement.setString(6, bank.getAddress());
+	        statement.setInt(7, bank.getAmount());
+	        statement.setInt(7, bank.getAcc_no());
+	        
 	         
 	         
 	        boolean rowUpdated = statement.executeUpdate() > 0;

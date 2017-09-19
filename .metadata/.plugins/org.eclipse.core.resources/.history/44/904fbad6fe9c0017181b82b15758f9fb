@@ -1,0 +1,53 @@
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Welcome to United Bank</title>
+    </head>
+    <body>
+    </br>
+    </br>
+    </br>
+    
+        <form method="post" action="login">
+        
+        <div id="navigation">
+    <ul>
+    <li><a href="create.html">NEW ACCOUNT</a></li>
+    <li><a href="balance1.jsp">BALANCE</a></li>
+    <li><a href="deposit1.jsp">DEPOSIT</a></li>
+    <li><a href="withdraw1.jsp">WITHDRAW</a></li>
+    <li><a href="transfer1.jsp">TRANSFER</a></li>
+    <li><a href="closeac1.jsp">CLOSE A/C</a></li>
+    <li><a href="about.jsp">Contact Us</a></li>
+    </ul>
+</div>
+            <center>
+            <table border="1" width="30%" cellpadding="3">
+                <thead>
+                    <tr>
+                        <th colspan="2">Login Here</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Admin Username</td>
+                        <td><input type="text" name="acc_no" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="password" value="" /></td>
+                    </tr>
+                    <tr>
+                      &nbsp; <td><input type="submit" value="Login" /></td>
+                       <!--  <td><input type="reset" value="Reset" /></td> -->
+                    </tr>
+                   
+                </tbody>
+            </table>
+            </center>
+        </form>
+    </body>
+</html>

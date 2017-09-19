@@ -92,6 +92,10 @@ public class ControllerServlet extends HttpServlet {
                   case "/login1":
                 	  UserLogin(request,response);
                 	  break;
+                  case "/logout":
+                	  logOut(request,response);
+                	  break;
+                	  
                   default:
                      response.sendRedirect("index.jsp");
                      break;
@@ -115,18 +119,19 @@ public class ControllerServlet extends HttpServlet {
     throws SQLException,IOException,ServletException{
    	 
    	 String acc_no=request.getParameter("acc_no");
+   	 System.out.println("11111111111"+acc_no);
         String password=request.getParameter("password");
         LoginUser obj=new LoginUser(acc_no,password);
         if(password.equals("admin")){
     		//out.print("Welcome", uname);
     		HttpSession session=request.getSession();
-    		session.setAttribute("acc_no",acc_no);
+    		session.setAttribute("email",acc_no);
     		  response.sendRedirect("list");
     		
     		}
     		else{
     			//out.print("Sorry, username or password error!");
-    			request.getRequestDispatcher("login.jsp").include(request, response);
+    			request.getRequestDispatcher("loginError.jsp").include(request, response);
     		}
     }
     
@@ -277,5 +282,16 @@ model newbank = new model( password,fname,lname,phone,email,address,amount);
     	      
 	
     }
+    
+    
+    private void logOut(HttpServletRequest request, HttpServletResponse response)
+            throws SQLException, IOException, ServletException {
+	
+	//out.println("thanq you!!, Your session was destroyed successfully!!");
+	HttpSession session = request.getSession(false);
+	// session.setAttribute("user", null);
+	session.removeAttribute("email");
+	 response.sendRedirect("index.jsp");
+	} 
 
 }

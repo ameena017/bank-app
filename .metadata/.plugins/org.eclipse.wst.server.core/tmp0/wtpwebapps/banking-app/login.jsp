@@ -12,6 +12,8 @@
     </br>
     
         <form method="post" action="login">
+        
+      
             <center>
             <table border="1" width="30%" cellpadding="3">
                 <thead>
@@ -32,9 +34,7 @@
                       &nbsp; <td><input type="submit" value="Login" /></td>
                        <!--  <td><input type="reset" value="Reset" /></td> -->
                     </tr>
-                    <tr>
-                        <td colspan="2">Don't have an account?! <a href="reg.jsp">Contact your nearest United Bank branch here</a></td>
-                    </tr>
+                   
                 </tbody>
             </table>
             </center>

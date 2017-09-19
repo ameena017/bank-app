@@ -8,6 +8,10 @@
 
 </head> 
 <body>
+<div align="right">
+    <a href="logout">Logout</a>
+    
+</div>
 
 <center>
         <h1>Unite Bank- Customer Details</h1>

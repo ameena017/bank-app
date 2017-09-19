@@ -8,7 +8,10 @@
 <title>New Customer</title>
 </head>
 <body>
-
+<div align="right">
+    <a href="logout">Logout</a>
+    
+</div>
 <center>
         <h1>United Bank</h1>
         <h2>
@@ -58,7 +61,7 @@
             <tr>
                 <th>Last Name </th>
                 <td>
-                    <input type="text" name="lnmae" size="45"
+                    <input type="text" name="lname" size="45"
                             value="<c:out value='${bank.lname}' />"
                     />
                 </td>
@@ -67,7 +70,7 @@
             <tr>
                 <th>Phone No </th>
                 <td>
-                    <input type="text" name="fname" size="45"
+                    <input type="text" name="phone" size="45"
                             value="<c:out value='${bank.phone}' />"
                     />
                 </td>
