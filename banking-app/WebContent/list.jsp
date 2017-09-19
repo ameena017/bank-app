@@ -13,11 +13,11 @@
     
 </div>
 <center>
-        <h1>Unite Bank- Customer Details</h1>
+        <h1>Unite Bank- Account Holders Details</h1>
         <h2>
-            <a href="new">click to Add New Customer</a>
+            <a href="new">Click to Add New Customer</a>
             &nbsp;&nbsp;&nbsp;
-            <a href="list">Click to list all customers</a>
+            <a href="list">Click to List All Customers</a>
              
         </h2>
     </center>

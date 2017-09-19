@@ -17,19 +17,20 @@
     <img src="C:\Users\AM389043\Desktop\logo.png" a style="width:128px;height:128px;">
 </div>
 
-</center>
+
 
 </br>
 <div id="navigation">
     <ul>
    <h3 style="font-size:150%;">Select User Type</h3>	
-    <li><a href="login.jsp">Bank Admin</a></li>
-    <li><a href="login1.jsp">Customer</a></li>
+    <a href="login.jsp">Bank Admin</a>
+    </br>
+    <a href="login1.jsp">Customer</a>
    
     </ul>
 </div>
           
-            
+   </center>         
         </form>
     </body>
 </html>

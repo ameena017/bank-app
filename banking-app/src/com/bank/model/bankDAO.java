@@ -120,7 +120,7 @@ public class bankDAO {
 	        statement.setString(5, bank.getEmail());
 	        statement.setString(6, bank.getAddress());
 	        statement.setInt(7, bank.getAmount());
-	        statement.setInt(7, bank.getAcc_no());
+	        statement.setInt(8, bank.getAcc_no());
 	        
 	         
 	         

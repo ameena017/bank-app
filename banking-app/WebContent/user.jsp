@@ -14,7 +14,7 @@
 </div>
 
 <center>
-        <h1>Unite Bank- Customer Details</h1>
+        <h1 style="font-size:200%;">Unite Bank- Customer Details</h1>
         <!-- <h2>
             <a href="new">click to Add New Customer</a>
             &nbsp;&nbsp;&nbsp;
@@ -23,6 +23,8 @@
         </h2> -->
     </center>
     <div align="center">
+  <p style="color:SlateBlue;" style="font-size:150%;">  Welcome <c:out value="${bank.fname }"/> </p>
+    </br>
         <table border="1" cellpadding="5">
             <caption><h2>Account details</h2></caption>
             <tr>
@@ -43,13 +45,17 @@
                     <td><c:out value="${bank.email}" /></td>
                     <td><c:out value="${bank.address}" /></td>
                     <td><c:out value="${bank.amount}" /></td>
-                       <td> <a href="edit1?acc_no=<c:out value='${bank.acc_no}' />">Edit </a>
+                       <%-- <td> <a href="edit1?acc_no=<c:out value='${bank.acc_no}' />">Edit </a>
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                       <%--  <a href="delete?acc_no=<c:out value='${bank.acc_no}' />">Delete</a> --%>                     
-                    </td>
+                        <a href="delete?acc_no=<c:out value='${bank.acc_no}' />">Delete</a>                     
+                    </td> --%>
                 </tr>
           <%--   </c:forEach> --%>
         </table>
+        </br>
+        </br>
+        <a href="edit1?acc_no=<c:out value='${bank.acc_no}' />">Update your details </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
     </div>   
 </body>
 </html>

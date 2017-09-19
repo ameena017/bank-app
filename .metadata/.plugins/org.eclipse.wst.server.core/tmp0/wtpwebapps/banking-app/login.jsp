@@ -15,6 +15,7 @@
         
       
             <center>
+            <h1 style="color:SlateBlue;">Admin Login Page</h1>
             <table border="1" width="30%" cellpadding="3">
                 <thead>
                     <tr>
